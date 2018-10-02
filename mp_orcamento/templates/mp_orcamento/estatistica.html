@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Estatisticas</title>
+</head>
+    <body>
+        <h1>Estatísticas</h1>
+        <h2>Quantidade de clientes</h2>
+        <p>{{ quantidade }} cliente(s).</p>
+        <h2>Maior custo total de orçamentos</h2>
+        <p>{{ orcamento_maior_custo.cliente.nome }}, 
+            R$ {{ orcamento_maior_custo.custo_total }}.
+        </p>
+        <h2>Menor custo total de orçamentos</h2>
+        <p>{{ orcamento_menor_custo.cliente.nome }}, 
+            R$ {{ orcamento_menor_custo.custo_total }}.
+    </body>
+</html>

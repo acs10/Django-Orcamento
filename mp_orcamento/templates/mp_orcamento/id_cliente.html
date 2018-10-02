@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Clientes </title>
+</head>
+<body>
+    <center>
+    <h3> 
+    	<table>
+    		<tr>
+    			<td> Cliente: </td> 
+    			<td> <u>{{ cliente.nome }}</u> </td> 
+    		</tr>    		
+    		<tr>
+    			<td> E-mail: </td>
+    			<td>{{ cliente.email }}</td> 
+    		</tr>
+    	</table>
+     </h3>
+ 	</center>
+
+	<h3>Orçamentos</h3>
+
+	<table border="1">
+		<thead>
+			<tr>
+	            <th>Data e hora</th>	            
+	            <th>Custo total (R$)</th>
+	        </tr>
+		</thead>
+		<tbody>
+			{% for orcamentos in orcamento %}
+	        <tr>
+	        	<td>{{orcamentos.data_hora}}</td>
+			    <td>{{ orcamentos.custo_total }}</td>
+	        </tr>			    
+		    {% endfor %}		    
+		</tbody>    	    
+	</table>
+</body>
+</html>
